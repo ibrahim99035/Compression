@@ -1,8 +1,8 @@
-from tarfile import ENCODING
 from CompAlgorithms.LZSS import LZSSclass
 from CompAlgorithms.LZW import LZWclass
 from CompAlgorithms.ArthmeticEncoding import ArthClass
 from CompAlgorithms.Huffman import HuffmanClass
+from CompAlgorithms.RunLength import RLC
 
 arithmeticEncodingFrequencyTable = {
     'A' : 1,
@@ -41,6 +41,9 @@ P = probabilities
 
 huffman_code = huffmanClassObject.compute_code()
 #-----------------------------------------------------------------------------------------------------------------------
+RLCencoded = RLC.encode(userInput)
+RLCdecoded = RLC.decode(RLCencoded)
+#-----------------------------------------------------------------------------------------------------------------------
 while(True):
     print("=========================================================================")
     print("Enter 1 to use LZSS Algorithm")
@@ -71,6 +74,9 @@ while(True):
                 print(' %-4r |%12s' % (char[0], 1))
                 continue
             print(' %-4r |%12s' % (char[0], huffman_code[id]))
+    elif key == 5:
+        print("RLC Compressed: " + RLCencoded)
+        print("RLC Decompressed: " + RLCdecoded)
     else:
         print("Invalid input, please enter a valid number")
 

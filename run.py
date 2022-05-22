@@ -15,13 +15,13 @@ while(True):
     print("Enter 2 to use LZW Algorithm")
     print("Enter the number of the algorithm you want to use: ")
     print("=========================================================================")
-    key = input("Your choice: ")
-    if key == '0':
+    key = int(input("Your choice: ")) 
+    if key == 0:
         break
-    elif key == '1':
+    elif key == 1:
         print("LZSS Compressed: " + LZSScompressed)
         print("LZSS Decompressed: " + LZSSdecompressed)
-    elif key == '2':
+    elif key == 2:
         print("LZW Compressed: " + LZWcompressed)
         print("LZW Decompressed: " + LZWdecompressed)
 

@@ -1,4 +1,4 @@
-class LZWclass():
+class LZWclass:
     def compress(s):
         result = ""
         table = {}

@@ -1,4 +1,4 @@
-class LZSSclass():
+class LZSSclass:
     def compress(s):
         result = ""
         slidingWindow = "" * 7
